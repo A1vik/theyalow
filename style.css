@@ -1,0 +1,181 @@
+/* Scaffolding */
+
+@font-face {
+  font-family: "PT Sans";
+  font-display: swap;
+  src: local("PT Sans"),
+    url("./assets/fonts/ptsans.woff2") format("woff2"),
+    url("./assets/fonts/ptsans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Asap";
+  font-display: swap;
+  src: local("Asap"),
+    url("./assets/fonts/Asap-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("./assets/fonts/opensans.woff2") format("woff2"),
+    url("./assets/fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("./assets/fonts/PTSansNarrow-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Segoe WP";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("./assets/fonts/SegoeWP.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Segoe WP";
+  font-weight: 300;
+  font-style: normal;
+  src:
+    url("./assets/fonts/segoe-wp-light.ttf") format("ttf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+
+  background: url(./assets/img/bg-hero.jpg) no-repeat;
+  background-size: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.page-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 28px;
+}
+
+/* Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__title {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Lucida Sans Unicode";
+  font-style: italic;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.42);
+  font-size: 41px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Menu */
+
+.menu {
+  margin-top: 43px;
+  
+}
+
+.menu__list {
+  display: flex;
+  padding: 0;
+
+  list-style: none;
+  background-image: url("./assets/img/bg-menu.svg");
+  box-shadow: -8px -8px 0px -1px rgba(245,197,6,0.27),
+  -4px -4px 0px -1px rgba(245,197,6,0.27);
+  
+}
+
+.menu__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 9px 22px 9px 45px;
+
+  font-family: "Segoe WP";
+  font-weight: 400;
+  color: #9b7d08;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu__link::before {
+  position: absolute;
+  left: 17px;
+  content: "";
+}
+
+.menu__link--about::before {
+  content: url(./assets/img/icon-about-su.svg);
+}
+
+.menu__link--services::before {
+  content: url(./assets/img/icon-services.svg);
+}
+
+.menu__link--contact::before {
+  content: url(./assets/img/icon-contact.svg);
+}
+
+.menu__link::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  width: 1px;
+  height: 40px;
+
+  background-color: #000000;
+  opacity: 0.1;
+}
+
+.menu__link:hover {
+  background-color: #ffdb8b;
+  opacity: 0.5;
+}
+
+
+/* MAIN */
+
+/* Hero */
+
+.hero {
+  display: flex;
+}
