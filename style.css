@@ -12,9 +12,8 @@
 
 @font-face {
   font-family: "Asap";
-  font-display: swap;
-  src: local("Asap"),
-    url("./assets/fonts/Asap-Regular.ttf") format("ttf");
+  src: 
+    url("./assets/fonts/Asap-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -45,7 +44,7 @@
 }
 
 @font-face {
-  font-family: "Segoe WP";
+  font-family: "Segoe WP", "Arial", sans-serif;
   font-weight: 300;
   font-style: normal;
   src:
@@ -61,11 +60,10 @@
 body {
   position: relative;
   font-size: 17px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
-  background: url(./assets/img/bg-hero.jpg) no-repeat;
-  background-size: auto;
+  
 }
 
 img {
@@ -74,8 +72,9 @@ img {
 }
 
 .wrapper {
-  max-width: 1020px;
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 0 140px;
 }
 
 /* HEADER */
@@ -93,11 +92,15 @@ img {
   align-items: center;
 }
 
+.logo__image:hover {
+  opacity: 0.5;
+}
+
 .logo__title {
   margin: 0;
   padding: 0;
 
-  font-family: "Lucida Sans Unicode";
+  font-family: "Lucida Sans Unicode", "Arial", sans-serif;
   font-style: italic;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.42);
   font-size: 41px;
@@ -114,6 +117,7 @@ img {
 
 .menu__list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
 
   list-style: none;
@@ -129,7 +133,7 @@ img {
   width: 100%;
   padding: 9px 22px 9px 45px;
 
-  font-family: "Segoe WP";
+  font-family: "Segoe WP", "Arial", sans-serif;
   font-weight: 400;
   color: #9b7d08;
   text-transform: uppercase;
@@ -177,5 +181,69 @@ img {
 /* Hero */
 
 .hero {
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: -168px;
+  padding-top: 168px;
+  padding-bottom: 20px;
+  background: url(./assets/img/bg-hero.jpg) no-repeat;
+  background-size: auto;
+}
+
+.hero .wrapper {
   display: flex;
+  justify-content: space-between;
+}
+
+.hero__videoplayer {
+  margin: 0;
+  padding: 0;
+}
+
+.hero__title {
+  margin: 0;
+  padding: 0;
+  padding-top: 90px;
+
+  font-family: "Asap", "Arial", sans-serif;
+  font-size: 63px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero__title span {
+  color: #f5c506;
+}
+
+
+/* Advantages */
+
+.advantages {
+}
+
+.advantages .wrapper {
+  background-image: url(./assets/img/bg-advantages.png);
+  background-repeat: no-repeat;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding: 37px 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.advantages__text {
+  margin: 0;
+
+  font-family: "Segoe UI";
+  font-size: 27px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
 }
