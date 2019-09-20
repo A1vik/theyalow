@@ -248,7 +248,7 @@ img {
 
 .advantages__text {
   margin: 0;
-  margin-top: 13px;
+  margin-top: 15px;
 
   font-family: "Segoe UI";
   font-size: 27px;
@@ -321,9 +321,6 @@ img {
   height: 61px;
 }
 
-.news__item--text::after {
-
-}
 
 .news__twitter-icon {
   padding: 48px 83px;
@@ -557,11 +554,8 @@ input[type=range]:focus::-ms-fill-upper {
 
 /* FOOTER */
 
-.page-footer {
-}
-
 .page-footer .wrapper {
-  margin-top: -5px;
+  margin-top: -6px;
   display: flex;
   align-items: center;
 
