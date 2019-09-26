@@ -21,7 +21,7 @@
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__link menu__link--about" href="#">About us</a>
+            <a class="menu__link menu__link--about" href="#">About&nbsp;us</a>
           </li>
           <li class="menu__item">
             <a class="menu__link menu__link--services" href="#">Services</a>
@@ -40,8 +40,10 @@
       <button class="hero__button hero__button--left"></button>
       <button class="hero__button hero__button--right"></button>
       <div class="wrapper">
-        <video class="hero__videoplayer" poster="./assets/img/videoplayer.jpg" width="549" height="357" controls></video>
-        <button class="hero__button-play"></button>
+        <div class="hero__videoplayer-wrapper">
+          <video class="hero__videoplayer" poster="./assets/img/bg-hero-mobile.jpg" width="549" height="357" controls></video>
+          <button class="hero__button-play"></button>
+        </div>
         <h2 class="hero__title">The cool<br><span>The minimal</span></h2>
       </div>
     </section>
@@ -50,16 +52,16 @@
       <div class="wrapper">
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--design">
-              <img src="./assets/img/advantages-1.svg" alt="" class="advantages__icon">
+              <img src="./assets/img/advantages-1.svg" alt="" class="advantages__icon advantages__icon--design">
               <p class="advantages__text">Better design</p>
             </li>
             <li class="advantages__item advantages__item--customise">
-              <img src="./assets/img/advantages-2.svg" alt="" class="advantages__icon">
+              <img src="./assets/img/advantages-2.svg" alt="" class="advantages__icon advantages__icon--customise">
               <p class="advantages__text">Customise</p>
             </li>
             <li class="advantages__item
             advantages__item--free">
-              <img src="./assets/img/advantages-3.svg" alt="" class="advantages__icon">
+              <img src="./assets/img/advantages-3.svg" alt="" class="advantages__icon advantages__icon--free">
               <p class="advantages__text">Its free</p>
             </li>
           </ul>
@@ -79,6 +81,18 @@
           </video>
           <div class="news__item--twitter news__item--plus">
             <img src="./assets/img/twitter.svg" alt="" class="news__twitter-icon">
+            <ul class="news__twitter-list">
+              <li class="news__twitter-item">Daily Mobile UI Design Inspiration #1 
+                  via @cssauthor</li>
+              <li class="news__twitter-item">Daily Mobile UI Design Inspiration #1 
+                  via @cssauthor</li>
+              <li class="news__twitter-item">Daily Mobile UI Design Inspiration #1 
+                  via @cssauthor</li>
+              <li class="news__twitter-item">
+                <input class="news__twitter-input" type="text">
+                <button class="news__twitter-button">Tweet</button>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="news__date">

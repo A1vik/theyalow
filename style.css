@@ -74,6 +74,12 @@ body {
   }
 }
 
+@media (min-width: 1320px) {
+  body {
+    background-size: contain;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -85,6 +91,17 @@ img {
   padding: 0 140px;
 }
 
+@media (max-width: 660px) {
+  body {
+    background: none;
+  }
+
+  .wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 /* HEADER */
 
 .page-header .wrapper {
@@ -92,6 +109,15 @@ img {
   justify-content: space-between;
   padding-top: 28px;
   margin-bottom: 50px;
+}
+
+@media (max-width: 660px) {
+  .page-header .wrapper {
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0;
+    margin: 0;
+  }
 }
 
 /* Logo */
@@ -116,6 +142,32 @@ img {
   font-size: 41px;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media (max-width: 660px) {
+  .logo {
+    background-image: url('./assets/img/bg-logo-mobile.png');
+    padding-left: 12px;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    padding-right: 25px;
+  }
+  
+  .logo__link {
+    display: block;
+    width: 40px;
+    height: 39px;
+    margin-right: 3px;
+  }
+
+  .logo__image {
+    /* width: 40px;
+    height: 39px; */
+  }
+
+  .logo__title {
+    font-size: 19px;
+  }
 }
 
 /* Menu */
@@ -200,6 +252,57 @@ img {
   opacity: 0.5;
 }
 
+@media (max-width: 660px) {
+  .menu {
+    margin: 0;
+  }
+
+  .menu__list {
+    flex-wrap: nowrap;
+    box-shadow: none;
+  }
+
+  .menu__link {
+    font-size: 19px;
+    padding: 0;
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
+
+  .menu__link--about {
+    padding-left: 58px;
+    padding-right: 26px;
+  }
+
+  .menu__link--about::before {
+    top: 22px;
+    left: 26px;
+  }
+
+  .menu__link--services {
+    padding-left: 37px;
+    padding-right: 19px;
+  }
+
+  .menu__link--services::before {
+    top: 23px;
+    left: 10px;
+  }
+
+  .menu__link--contact {
+    padding-left: 48px;
+    padding-right: 12px;
+  }
+
+  .menu__link--contact::before {
+    top: 22px;
+    left: 11px;
+  }
+
+  .menu__link::after {
+    height: 100%;
+  }
+}
 
 /* MAIN */
 
@@ -246,6 +349,13 @@ img {
   justify-content: space-between;
 }
 
+.hero__videoplayer-wrapper {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
 .hero__videoplayer {
   margin: 0;
   margin-top: 3px;
@@ -257,8 +367,10 @@ img {
 
 .hero__button-play {
   position: absolute;
-  top: 133px;
-  left: 390px;
+  top: 40%;
+  left: 45%;
+  /* transform: translateX(-33px);
+  transform: translateY(-33px); */
 
   width: 67px;
   height: 67px;
@@ -294,6 +406,30 @@ img {
   color: #ffffff;
 }
 
+@media (max-width: 660px) {
+  .hero {
+    padding-bottom: 0;
+  }
+
+  .hero__button {
+    display: none;
+  }
+
+  .hero__title {
+    display: none;
+  }
+
+  .hero__videoplayer {
+    margin: 0;
+    padding: 0;
+    width: 640px;
+    height: 327px;
+  }
+
+  .hero__button-play {
+    left: 46%;
+  }
+}
 
 /* Advantages */
 
@@ -395,6 +531,59 @@ img {
   text-align: center;
 }
 
+@media (min-width: 1320px) {
+  .advantages {
+    background-image: url(./assets/img/bg-advantages.jpg);
+  }
+}
+
+@media (max-width: 660px) {
+  .advantages__item {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    align-items: center;
+  }
+
+  .advantages__item--design {
+    top: -2px;
+    left: -14px;
+  }
+
+  .advantages__item--customise {
+    left: 0;
+  }
+
+  .advantages__item--free {
+    left: 14px;
+  }
+
+  .advantages__item::after {
+    display: none;
+  }
+
+  .advantages__item--design::before {
+    display: none;
+  }
+  .advantages__icon--design {
+    margin-bottom: 2px;
+    width: 89px;
+    height: 61px;
+  }
+
+  .advantages__icon--customise {
+    width: 67px;
+    height: 69px;
+  }
+
+  .advantages__icon--free {
+    width: 68px;
+    height: 69px;
+  }
+  .advantages__text {
+    font-size: 23px;
+  }
+}
+
 /* News */
 
 .news {
@@ -467,6 +656,10 @@ img {
   width: 340px;
   height: 233px;
   background-color: #ec9e03;
+}
+
+.news__twitter-list {
+  display: none;
 }
 
 .news__twitter-icon {
@@ -611,6 +804,137 @@ input[type=range]:focus::-ms-fill-upper {
   background: #fae58f;
 }
 
+@media (max-width: 660px) {
+  .news {
+    background: none;
+    padding-bottom: 0;
+  }
+
+  .news__title {
+    display: none;
+  }
+
+  .news__container {
+    flex-wrap: wrap;
+  }
+
+  .news__text {
+    box-sizing: content-box;
+    margin-top: 11px;
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-bottom: 9px;
+    padding-right: 19px;
+    padding-bottom: 17px;
+    width: 250px;
+
+    font-size: 29px;
+    line-height: 33px;
+    word-spacing: -3px;
+    
+  }
+
+  .news__item--video {
+    margin-right: 0;
+    width: 308px;
+    height: 232px;
+  }
+
+  .news__item--twitter {
+    display: flex;
+    width: 100%;
+
+    background-image: url('./assets/img/bg-twitter-mobile.png');
+  }
+
+  .news__twitter-list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .news__item--twitter::before {
+    display: none;
+  }
+
+  .news__twitter-item {
+    box-sizing: content-box;
+    width: 220px;
+    display: block;
+    margin-bottom: 14px;
+    margin-left: -5px;
+    padding: 9px 40px 5px 28px;
+
+    background-image: url('./assets/img/twitter-msg-bg.png');
+    background-repeat: no-repeat;
+    color: #8f8e8e;
+    font-family: "Arial MT", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .news__twitter-item:first-child {
+    margin-top: 24px;
+  }
+
+  .news__twitter-item:nth-child(2n) {
+    opacity: 0.8;
+  }
+  
+  .news__twitter-item:nth-child(3n) {
+    opacity: 0.7;
+  }
+
+  .news__twitter-item:last-child {
+    display: flex;
+    width: 300px;
+    background: none;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+  .news__twitter-input {
+    width: 204px;
+    height: 29px;
+    margin-top: -6px;
+    padding-left: 10px;
+
+    box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.11);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    /* border-radius: 10px; */
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+    background-color: #ffffff;
+  }
+
+  .news__twitter-button {
+    margin-top: -6px;
+    width: 71px;
+    height: 29px;
+    border: none;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%);
+    background-image: url('./assets/img/bg-button-twitter.png');
+
+    color: #ffffff;
+    font-family: "Arial MT", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .news__date {
+    display: none;
+  }
+
+  input[type="range"] {
+    display: none;
+  }
+
+}
 
 /* Platforms */
 
@@ -714,6 +1038,26 @@ input[type=range]:focus::-ms-fill-upper {
   font-weight: 400;
 }
 
+@media (max-width: 660px) {
+  .platforms__title {
+    padding-top: 34px;
+    margin-bottom: 82px;
+  }
+
+  .platforms__images {
+    padding-left: 56px;
+    flex-wrap: nowrap;
+  }
+
+  .platforms__list {
+    display: none;
+  }
+
+  .platforms__free-text {
+    top: -41px;
+    left: 25px;
+  }
+}
 
 /* FOOTER */
 
